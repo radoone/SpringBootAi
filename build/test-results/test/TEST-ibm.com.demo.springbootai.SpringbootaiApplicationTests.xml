@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ibm.com.demo.springbootai.SpringbootaiApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-02T19:03:41" hostname="Radovans-MacBook-Pro.local" time="0.423">
+  <properties/>
+  <testcase name="contextLoads()" classname="ibm.com.demo.springbootai.SpringbootaiApplicationTests" time="0.423"/>
+  <system-out><![CDATA[20:03:40.195 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ibm.com.demo.springbootai.SpringbootaiApplicationTests]: SpringbootaiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:03:40.241 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ibm.com.demo.springbootai.SpringbootaiApplication for test class ibm.com.demo.springbootai.SpringbootaiApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2025-03-02T20:03:40.386+01:00  INFO 50643 --- [springbootai] [    Test worker] i.c.d.s.SpringbootaiApplicationTests     : Starting SpringbootaiApplicationTests using Java 23.0.2 with PID 50643 (started by radoone in /Users/radoone/Devel/SpringBootAi)
+2025-03-02T20:03:40.386+01:00  INFO 50643 --- [springbootai] [    Test worker] i.c.d.s.SpringbootaiApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-02T20:03:40.789+01:00  INFO 50643 --- [springbootai] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-02T20:03:41.054+01:00  INFO 50643 --- [springbootai] [    Test worker] i.c.d.s.SpringbootaiApplicationTests     : Started SpringbootaiApplicationTests in 0.759 seconds (process running for 1.233)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/radoone/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Spring Boot Workshop</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .api-response {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #1a252f;
+        }
+        .footer {
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>IBM AI-Powered Spring Boot Workshop</h1>
+    
+    <div class="container">
+        <div class="message">
+            Welcome to our workshop! This is a simple Hello World example.
+        </div>
+        
+        <button id="hello-button">Get Hello Message</button>
+        
+        <div class="api-response" id="api-response">
+            Click the button to see the API response
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>IBM AI-Powered Spring Boot Workshop &copy; 2025</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const helloButton = document.getElementById('hello-button');
+            const apiResponse = document.getElementById('api-response');
+            
+            helloButton.addEventListener('click', async function() {
+                try {
+                    // Call the Hello World API
+                    const response = await fetch('/api/hello');
+                    
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    
+                    const data = await response.text();
+                    apiResponse.textContent = data;
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    apiResponse.textContent = 'Error: Could not fetch the hello message';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
