@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WaterLevel Bubbles Shop - Premium Quality</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2196F3;
+            --primary-dark: #1976D2;
+            --secondary: #FF9800;
+            --light-gray: #f5f5f5;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 0.5rem 1rem;
+        }
+        
+        .navbar-brand {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin: 0 0.5rem;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-weight: 300;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 2rem;
+            border: none;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-title {
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .features {
+            padding: 3rem 0;
+            background-color: white;
+            margin: 2rem 0;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .tab-content {
+            padding: 2rem 0;
+        }
+        
+        .nav-tabs .nav-link {
+            color: var(--text-secondary) !important;
+            font-weight: 500;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--primary) !important;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            font-style: italic;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .customer-name {
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .badge {
+            background-color: var(--secondary);
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+
+        /* Material Design inspired form elements */
+        .form-control {
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 0.75rem 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.25);
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="material-icons">bubble_chart</i> BubbleLevel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="material-icons">shopping_cart</i> Cart (0)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Premium Water Level Bubbles</h1>
+            <p>Add a splash of colour and personality to your water level tool! Our premium bubbles are guaranteed to brighten up any DIY project while maintaining perfect accuracy.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Features Section -->
+        <div class="features">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="material-icons feature-icon">verified</div>
+                    <h3>Premium Quality</h3>
+                    <p>All our bubbles are made from the highest quality materials for perfect accuracy.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="material-icons feature-icon">local_shipping</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Free next-day delivery on all orders over £20.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="material-icons feature-icon">thumb_up</div>
+                    <h3>100% Satisfaction</h3>
+                    <p>Not happy with your bubbles? Return them within 30 days for a full refund.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" id="bubbleTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab">Our Products</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="add-tab" data-bs-toggle="tab" data-bs-target="#add" type="button" role="tab">Add New Product</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="bubbleTabsContent">
+            <!-- Products Tab -->
+            <div class="tab-pane fade show active" id="list" role="tabpanel">
+                <div class="row">
+                    <div th:each="bubble : ${bubbles}" class="col-md-4">
+                        <div class="card">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge" th:if="${bubble.stockQuantity > 100}">BESTSELLER</span>
+                                <span class="badge bg-danger" th:if="${bubble.stockQuantity < 50}">LOW STOCK</span>
+                            </div>
+                            <img th:src="${bubble.imageUrl}" class="card-img-top" alt="Bubble Image">
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${bubble.name}">Bubble Name</h5>
+                                <p class="card-text" th:text="${bubble.description}">Description</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="price">£<span th:text="${bubble.price}">0.00</span></span>
+                                    <div class="text-muted">
+                                        <small th:text="${bubble.stockQuantity} + ' in stock'">0 in stock</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a th:href="@{/bubbles/{id}(id=${bubble.id})}" class="btn btn-primary">
+                                        <i class="material-icons" style="font-size: 1rem; vertical-align: text-top;">visibility</i> View Details
+                                    </a>
+                                    <button class="btn btn-outline-primary">
+                                        <i class="material-icons" style="font-size: 1rem; vertical-align: text-top;">add_shopping_cart</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Product Tab -->
+            <div class="tab-pane fade" id="add" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Add New Water Bubble</h5>
+                                <form th:action="@{/bubbles}" th:object="${newBubble}" method="post">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Bubble Name</label>
+                                        <input type="text" class="form-control" id="name" th:field="*{name}" placeholder="Enter product name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Description</label>
+                                        <textarea class="form-control" id="description" th:field="*{description}" rows="3" placeholder="Enter product description" required></textarea>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="price" class="form-label">Price (£)</label>
+                                            <input type="number" step="0.01" class="form-control" id="price" th:field="*{price}" placeholder="0.00" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="flavour" class="form-label">Flavour</label>
+                                            <input type="text" class="form-control" id="flavour" th:field="*{flavour}" placeholder="Enter flavour" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="stockQuantity" class="form-label">Stock Quantity</label>
+                                            <input type="number" class="form-control" id="stockQuantity" th:field="*{stockQuantity}" placeholder="0" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="imageUrl" class="form-label">Image URL</label>
+                                            <input type="text" class="form-control" id="imageUrl" th:field="*{imageUrl}" placeholder="Enter image URL" required>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="material-icons" style="font-size: 1rem; vertical-align: text-top;">add</i> Add Product
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>BubbleLevel Shop</h5>
+                    <p>Providing premium quality water level bubbles since 2010. Add personality to your tools without compromising on accuracy.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Products</a></li>
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-white">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>123 Bubble Street<br>
+                    Watertown, BL1 3WL<br>
+                    United Kingdom<br>
+                    Email: info@bubblelevel.com<br>
+                    Phone: +44 (0)123 456 7890</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p class="mb-0">© 2023 BubbleLevel Shop. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
