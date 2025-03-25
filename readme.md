@@ -87,6 +87,10 @@ Using the AI Chat feature, have Cursor add a reviews page. Make sure to referenc
 
 Relying on AI without understand the generated code will cause severe issues as the application grows more complex or bugs need fixing.
 
+If you run into any issues or want to undo changes, be sure use the **Checkpoints** feature.
+
+<img src="./public/checkpoints.png" alt="drawing" width="800"/>
+
 ### 4. Modify the website from bubbles to your teams choice of product
 
 Using the AI Compose/Agent feature, ask the AI to change from bubbles to your product of choice. You will need to get new images from the web.
@@ -104,10 +108,6 @@ Using any of the Cursor features, allow the user to add items to their cart, and
 ### 7. BONUS: Create an API to use Google's GenAI for image generation
 
 Using any of the Cursor features, create an API to generate new images for your products with [Google Imagen](https://ai.google.dev/gemini-api/docs/imagen-prompt-guide).
-
-If you run into any issues or want to undo changes, be sure use the **Checkpoints** feature.
-
-<img src="./public/checkpoints.png" alt="drawing" width="800"/>
 
 ### 8. BONUS: Create an API to use Google's GenAI for image captioning
 
