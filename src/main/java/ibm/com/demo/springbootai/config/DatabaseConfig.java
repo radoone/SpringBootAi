@@ -27,16 +27,16 @@ public class DatabaseConfig {
             bubble1.setPrice(2.99);
             bubble1.setFlavour("Rainbow");
             bubble1.setStockQuantity(100);
-            bubble1.setImageUrl("/images/bubliny.jpg");
+            bubble1.setImageUrl("/images/bubbles1.webp");
             bubbleRepository.save(bubble1);
 
             Bubble bubble2 = new Bubble();
             bubble2.setName("Ocean Wave");
-            bubble2.setDescription("Ocean-inspired bubbles that bring the sea to your water! With a hint of blueberry and mint flavour.");
+            bubble2.setDescription("Ocean-inspired bubbles that bring the sea to your water! With just a little a hint of blueberry and mint flavour.");
             bubble2.setPrice(3.49);
             bubble2.setFlavour("Ocean");
             bubble2.setStockQuantity(75);
-            bubble2.setImageUrl("/images/modre-bublinky-700-671.jpg");
+            bubble2.setImageUrl("/images//bubbles2.webp");
             bubbleRepository.save(bubble2);
 
 
@@ -47,7 +47,7 @@ public class DatabaseConfig {
             bubble3.setPrice(2.79);
             bubble3.setFlavour("Tropical");
             bubble3.setStockQuantity(120);
-            bubble3.setImageUrl("/images/images2.jpg");
+            bubble3.setImageUrl("/images/bubbles3.png");
             bubbleRepository.save(bubble3);
 
             Bubble bubble4 = new Bubble();
@@ -56,7 +56,7 @@ public class DatabaseConfig {
             bubble4.setPrice(2.49);
             bubble4.setFlavour("Strawberry");
             bubble4.setStockQuantity(90);
-            bubble4.setImageUrl("/images/images3.jpg");
+            bubble4.setImageUrl("/images/bubbles4.jpg");
             bubbleRepository.save(bubble4);
 
             Bubble bubble5 = new Bubble();
@@ -65,7 +65,7 @@ public class DatabaseConfig {
             bubble5.setPrice(2.29);
             bubble5.setFlavour("Lemon");
             bubble5.setStockQuantity(150);
-            bubble5.setImageUrl("/images/preview4.jpg");
+            bubble5.setImageUrl("/images/bubbles5.jpg");
             bubbleRepository.save(bubble5);
 
             Bubble bubble6 = new Bubble();
@@ -74,7 +74,7 @@ public class DatabaseConfig {
             bubble6.setPrice(2.69);
             bubble6.setFlavour("Cherry");
             bubble6.setStockQuantity(110);
-            bubble6.setImageUrl("/images/images4.jpg");
+            bubble6.setImageUrl("/images/bubbles6.jpg");
             bubbleRepository.save(bubble6);
             
         };

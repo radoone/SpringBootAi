@@ -24,7 +24,6 @@ The application is a template for a simple "Bubble E-Shop". We will be using AI 
 - cursor.ai
 - A sense of humour and curiosity about AI
 
-
 <!-- ### Configuration
 
 The application uses Spring AI with OpenAI integration. You'll need to configure your API keys in the `application.properties` file:
@@ -54,8 +53,7 @@ spring.ai.openai.api-key=your-api-key-here
    ./gradlew bootRun
    ```
 
-4. The application will start on `http://localhost:8080`
-
+4. The application will start on http://localhost:8080/bubbles
 
 ## Workshop TODOs
 
@@ -65,7 +63,7 @@ During the workshop, we'll be enhancing this application by exploring the follow
 
 Using the **Chat** feature, ask the AI to describe the codebase.
 
-Use `@Codebase` to set the context, ask the AI questions about your codebase. Cursor will search your codebase to find relevant code to your query. You can ask something like: `Describe this codebase to me.` 
+Use `@Codebase` to set the context, ask the AI questions about your codebase. Cursor will search your codebase to find relevant code to your query. You can ask something like: `Describe this codebase to me.`
 
 Feel free to ask follow-up questions or other specifics until you are ready to move on.
 
@@ -79,13 +77,13 @@ Using the **Tab Completion** feature, add three new items to the database by edi
 
 <img src="./public/tab.png" alt="drawing" width="800"/>
 
-### 3. Add a Reviews page 
+### 3. Add a Reviews page
 
-Using the AI Chat feature, have Cursor add a reviews page. Make sure to reference the codebase or relevant files: 
+Using the AI Chat feature, have Cursor add a reviews page. Make sure to reference the codebase or relevant files:
 
 `@Codebase Add a reviews page to this application.`
 
-**Review the code before accepting!!!** 
+**Review the code before accepting!!!**
 
 Relying on AI without understand the generated code will cause severe issues as the application grows more complex or bugs need fixing.
 
@@ -95,8 +93,15 @@ Using the AI Compose/Agent feature, ask the AI to change from bubbles to your pr
 
 <img src="./public/agent.png" alt="drawing" width="800"/>
 
+### 5. Create an About page
 
-### 5. Create an API to use Google's GenAI for image generation
+Using any of the Cursor features, create an **About Page** for your E-Shop.
+
+### 6. Implement "Add to Cart" functionality and page
+
+Using any of the Cursor features, allow the user to add items to their cart, and view the items in a new page.
+
+### 7. BONUS: Create an API to use Google's GenAI for image generation
 
 Using any of the Cursor features, create an API to generate new images for your products with [Google Imagen](https://ai.google.dev/gemini-api/docs/imagen-prompt-guide).
 
@@ -104,7 +109,7 @@ If you run into any issues or want to undo changes, be sure use the **Checkpoint
 
 <img src="./public/checkpoints.png" alt="drawing" width="800"/>
 
-### 6. Create an API to use Google's GenAI for image captioning
+### 8. BONUS: Create an API to use Google's GenAI for image captioning
 
 Using any of the Cursor features, create an API to describe the new images with [Google Image Captioning](https://ai.google.dev/gemma/docs/capabilities/vision/image-interpretation#:~:text=You%20can%20use%20Gemma%203,the%20context%20from%20visual%20information.).
 
